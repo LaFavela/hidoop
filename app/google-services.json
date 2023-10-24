@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1049297869670",
+    "project_id": "hidoop-79a3c",
+    "storage_bucket": "hidoop-79a3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049297869670:android:f9cc6394b900b40f2406a7",
+        "android_client_info": {
+          "package_name": "com.papela.hidoop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNXtXpnsr0ZT6-egzJhUboVAaKj-P7szA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
