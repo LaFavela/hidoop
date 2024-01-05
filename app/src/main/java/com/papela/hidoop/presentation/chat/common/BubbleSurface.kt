@@ -27,7 +27,7 @@ fun ReceiveChatBubbleSurface(modifier: Modifier = Modifier, content: @Composable
                 bottomStart = 15.dp
             ),
             color = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.widthIn(max = (getScreenWidth() * 0.75f).dp)
+            modifier = modifier.widthIn(max = (getScreenWidth() * 0.75f).dp)
         ) {
             content()
         }
@@ -45,7 +45,7 @@ fun SentChatBubbleSurface(modifier: Modifier = Modifier, content: @Composable ()
                 bottomStart = 15.dp
             ),
             color = MaterialTheme.colorScheme.surfaceColorAtElevation(1.dp),
-            modifier = Modifier.widthIn(max = (getScreenWidth() * 0.75f).dp)
+            modifier = modifier.widthIn(max = (getScreenWidth() * 0.75f).dp)
         ) {
             content()
         }
