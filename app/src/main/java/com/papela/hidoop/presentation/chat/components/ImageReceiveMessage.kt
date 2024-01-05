@@ -39,23 +39,25 @@ fun ImageReceiveMessege(name: String, title: String, data: String) {
             color = MaterialTheme.colorScheme.surfaceColorAtElevation(1.dp),
             modifier = Modifier
         ) {
-            Text(
-                text = title,
-                modifier = Modifier
-                    .padding(start = 16.dp)
-                    .padding(end = 25.dp)
-                    .padding(top = 16.5.dp),
-                color = MaterialTheme.colorScheme.onSurface,
-                fontWeight = FontWeight.Bold
-            )
-            Text(
-                text = name,
-                modifier = Modifier
-                    .padding(start = 16.dp)
-                    .padding(end = 25.dp)
-                    .padding(top = 45.dp)
-            )
-            LoadingImage(data = data)
+            Column {
+                Text(
+                    text = title,
+                    modifier = Modifier
+                        .padding(start = 16.dp)
+                        .padding(end = 25.dp)
+                        .padding(top = 16.5.dp),
+                    color = MaterialTheme.colorScheme.onSurface,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = name,
+                    modifier = Modifier
+                        .padding(start = 16.dp)
+                        .padding(end = 25.dp)
+                        .padding(top = 16.dp)
+                )
+                LoadingImage(data = data)
+            }
         }
     }
 }
@@ -65,10 +67,10 @@ fun LoadingImage(data: String) {
     Box(
         modifier = Modifier
             .height(300.dp)
-            .width(300.dp)
+            .width(350.dp)
             .padding(start = 16.dp)
             .padding(end = 25.dp)
-            .padding(top = 75.dp)
+            .padding(top = 16.dp)
             .padding(bottom = 30.dp)
             .background(
                 color = MaterialTheme.colorScheme.surfaceColorAtElevation(1.dp),
