@@ -27,7 +27,7 @@ import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 
 @Composable
-fun ImageReceiveMessege(name: String, title: String, data: String) {
+fun ImageReceiveMessage(name: String, title: String, data: String) {
     Column {
         Surface(
             shape = RoundedCornerShape(
@@ -108,8 +108,8 @@ fun LoadingImage(data: String) {
 @Preview
 @Composable
 fun MessegePreview() {
-    ImageReceiveMessege(
-        name = "Tips diet adalah makan dan minum yang sehat",
+    ImageReceiveMessage(
+        name = "Tips diet adalah makan dan minum yang sehat dabfadf cadffdf adfafad adfadfafd afafadfa adfa",
         title = "Testing",
         data = "https://awsimages.detik.net.id/community/media/visual/2023/08/11/resep-salad-sayuran-saus-minyak-olive-bawang.jpeg?w=600&q=90"
     )
