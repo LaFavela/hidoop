@@ -12,8 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.papela.hidoop.presentation.chat.components.ChatHeader
-import com.papela.hidoop.presentation.chat.components.RegularReceiveMessage
-import com.papela.hidoop.presentation.chat.components.RegularSentMessage
+import com.papela.hidoop.presentation.chat.components.RegularReceive
+import com.papela.hidoop.presentation.chat.components.RegularSent
 
 @Composable
 fun ChatScreen() {
@@ -30,18 +30,18 @@ fun ChatScreen() {
                     .weight(weight = 1f, fill = false),
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                RegularReceiveMessage("Android")
-                RegularSentMessage("Jetpack")
-                RegularSentMessage("Compose")
-                RegularReceiveMessage("Is")
-                RegularReceiveMessage("Greatest")
-                RegularSentMessage("Ever")
-                RegularSentMessage("Ever")
-                RegularSentMessage("Ever")
-                RegularSentMessage("Ever")
-                RegularSentMessage("Ever")
-                RegularSentMessage("Ever")
-                RegularSentMessage("Ever")
+                RegularReceive("Android")
+                RegularSent("Jetpack")
+                RegularSent("Compose")
+                RegularReceive("Is")
+                RegularReceive("Greatest")
+                RegularSent("Ever")
+                RegularSent("Ever")
+                RegularSent("Ever")
+                RegularSent("Ever")
+                RegularSent("Ever")
+                RegularSent("Ever")
+                RegularSent("Ever")
             }
         }
 //        Scaffold(
