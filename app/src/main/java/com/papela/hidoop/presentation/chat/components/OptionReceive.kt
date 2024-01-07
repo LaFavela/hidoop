@@ -30,13 +30,13 @@ fun OptionReceive(title: String, content: String, options: List<String>) {
             Text(
                 text = title,
                 modifier = Modifier
-                    .padding(top = 16.dp, start = 16.dp, end = 16.dp),
+                    .padding(top = 12.dp, start = 12.dp, end = 12.dp),
                 fontWeight = FontWeight.Medium
             )
             Text(
                 text = content,
                 modifier = Modifier
-                    .padding(vertical = 8.dp, horizontal = 16.dp)
+                    .padding(vertical = 8.dp, horizontal = 12.dp)
             )
             options.forEachIndexed { index, option ->
                 RoundedRadioButton(
@@ -72,13 +72,13 @@ fun RoundedRadioButton(
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary),
         modifier = modifier
             .fillMaxWidth()
-            .padding(bottom = 8.dp, start = 16.dp, end = 16.dp),
+            .padding(start = 12.dp, end = 12.dp, bottom = 4.dp),
         onClick = onClick
     ) {
         Text(
             text = option,
             modifier = Modifier
-                .padding(vertical = 8.dp, horizontal = 16.dp),
+                .padding(vertical = 8.dp, horizontal = 12.dp),
         )
     }
 }
