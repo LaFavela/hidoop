@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.surfaceColorAtElevation
 import androidx.compose.runtime.Composable
@@ -25,43 +24,32 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImagePainter
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
+import com.papela.hidoop.presentation.chat.common.ReceiveChatBubbleSurface
 
 @Composable
 fun ImageReceiveMessage(name: String, title: String, data: String) {
-    Column {
-        Surface(
-            shape = RoundedCornerShape(
-                topStart = 0.dp,
-                topEnd = 15.dp,
-                bottomEnd = 15.dp,
-                bottomStart = 15.dp
-            ),
-            color = MaterialTheme.colorScheme.surfaceColorAtElevation(1.dp),
-            modifier = Modifier
-        ) {
-            Column {
-                Text(
-                    text = title,
-                    modifier = Modifier
-                        .padding(start = 16.dp)
-                        .padding(end = 25.dp)
-                        .padding(top = 16.5.dp),
-                    color = MaterialTheme.colorScheme.onSurface,
-                    fontWeight = FontWeight.Bold
-                )
-                Text(
-                    text = name,
-                    modifier = Modifier
-                        .padding(start = 16.dp)
-                        .padding(end = 25.dp)
-                        .padding(top = 16.dp)
-                )
-                LoadingImage(data = data)
-            }
+    ReceiveChatBubbleSurface {
+        Column {
+            Text(
+                text = title,
+                modifier = Modifier
+                    .padding(start = 16.dp)
+                    .padding(end = 25.dp)
+                    .padding(top = 16.5.dp),
+                color = MaterialTheme.colorScheme.onSurface,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                text = name,
+                modifier = Modifier
+                    .padding(start = 16.dp)
+                    .padding(end = 25.dp)
+                    .padding(top = 16.dp)
+            )
+            LoadingImage(data = data)
         }
     }
 }
-
 @Composable
 fun LoadingImage(data: String) {
     Box(
@@ -82,8 +70,7 @@ fun LoadingImage(data: String) {
             ImageRequest
                 .Builder(LocalContext.current)
                 .data(data)
-                .apply(block = fun ImageRequest.Builder.() {
-                }).build()
+                .build()
         )
         val painterState = painter.state
         Image(
