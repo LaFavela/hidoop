@@ -73,8 +73,8 @@ val AppFontTypography = Typography(
             )
         ),
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
+        fontSize = 12.sp,
         lineHeight = 18.sp,
-        letterSpacing = (-0.24).sp
+        letterSpacing = 0.5.sp
     )
 )
