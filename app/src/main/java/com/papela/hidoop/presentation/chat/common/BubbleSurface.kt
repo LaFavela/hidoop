@@ -2,6 +2,7 @@ package com.papela.hidoop.presentation.chat.common
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
@@ -14,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import com.papela.hidoop.util.getScreenWidth
 
 @Composable
-fun SentChatBubbleSurface(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+fun SentChatBubbleSurface(modifier: Modifier = Modifier, content: @Composable (modifier: Modifier) -> Unit) {
     Column(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.End
@@ -29,13 +30,16 @@ fun SentChatBubbleSurface(modifier: Modifier = Modifier, content: @Composable ()
             color = MaterialTheme.colorScheme.primary,
             modifier = modifier.widthIn(max = (getScreenWidth() * 0.75f).dp)
         ) {
-            content()
+            content(modifier.padding(12.dp))
         }
     }
 }
 
 @Composable
-fun ReceiveChatBubbleSurface(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+fun ReceiveChatBubbleSurface(
+    modifier: Modifier = Modifier,
+    content: @Composable (modifier: Modifier) -> Unit
+) {
     Column {
         Surface(
             shape = RoundedCornerShape(
@@ -47,7 +51,7 @@ fun ReceiveChatBubbleSurface(modifier: Modifier = Modifier, content: @Composable
             color = MaterialTheme.colorScheme.surfaceColorAtElevation(1.dp),
             modifier = modifier.widthIn(max = (getScreenWidth() * 0.75f).dp)
         ) {
-            content()
+            content(modifier.padding(12.dp))
         }
     }
 }

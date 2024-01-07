@@ -12,7 +12,7 @@ fun RegularSent(content: String) {
     SentChatBubbleSurface {
         Text(
             text = content,
-            modifier = Modifier.padding(16.dp)
+            modifier = it
         )
     }
 }
