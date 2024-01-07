@@ -12,7 +12,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.papela.hidoop.presentation.chat.components.ChatHeader
-import com.papela.hidoop.presentation.chat.components.OptionReceive
 import com.papela.hidoop.presentation.chat.components.RegularReceive
 import com.papela.hidoop.presentation.chat.components.RegularSent
 
@@ -31,12 +30,7 @@ fun ChatScreen() {
                     .weight(weight = 1f, fill = false),
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                OptionReceive(
-                    title = "Testing",
-                    content = "Testing",
-                    options = listOf("Testing", "Testing", "Testing")
-                )
-                RegularReceive("Androidddddddddddddddddddddddddddddddddddddddddddddddddddd")
+                RegularReceive("Android")
                 RegularSent("Jetpack")
                 RegularSent("Compose")
                 RegularReceive("Is")
