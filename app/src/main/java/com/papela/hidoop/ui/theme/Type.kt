@@ -4,9 +4,13 @@ import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.googlefonts.Font
+import androidx.compose.ui.text.googlefonts.GoogleFont
 import androidx.compose.ui.unit.sp
+import com.papela.hidoop.R
 
 // Set of Material typography styles to start with
+/*
 val Typography = Typography(
     bodyLarge = TextStyle(
         fontFamily = FontFamily.Default,
@@ -15,7 +19,7 @@ val Typography = Typography(
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     )
-    /* Other default text styles to override
+    // Other default text styles to override
     titleLarge = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
@@ -30,5 +34,47 @@ val Typography = Typography(
         lineHeight = 16.sp,
         letterSpacing = 0.5.sp
     )
-    */
+
+)
+*/
+
+private fun getGoogleFontFamily(
+    name: String,
+    provider: GoogleFont.Provider = googleFontProvider,
+    weights: List<FontWeight>
+): FontFamily {
+    return FontFamily(
+        weights.map {
+            Font(GoogleFont(name), provider, it)
+        }
+    )
+}
+
+private val googleFontProvider: GoogleFont.Provider by lazy {
+    GoogleFont.Provider(
+        providerAuthority = "com.google.android.gms.fonts",
+        providerPackage = "com.google.android.gms",
+        certificates = R.array.com_google_android_gms_fonts_certs
+    )
+}
+
+val AppFontTypography = Typography(
+    bodyLarge = TextStyle(
+        fontFamily = getGoogleFontFamily(
+            name = "Poppins",
+            weights = listOf(
+                FontWeight.Normal,
+                FontWeight.Medium,
+                FontWeight.Bold,
+                FontWeight.Light,
+                FontWeight.ExtraLight,
+                FontWeight.SemiBold,
+                FontWeight.Thin,
+            )
+        ),
+        fontWeight = FontWeight.Normal,
+        fontSize = 12.sp,
+        lineHeight = 18.sp,
+        letterSpacing = 0.5.sp
+    )
 )
