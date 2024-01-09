@@ -39,6 +39,7 @@ import androidx.compose.ui.unit.sp
 import com.papela.hidoop.presentation.chat.common.ReceiveChatBubbleSurface
 import com.papela.hidoop.util.getScreenWidth
 
+@Suppress("LongMethod")
 @Composable
 fun DateAssignment(content: String, title: String, cardData: List<CardData>) {
     var isExpanded by remember {
