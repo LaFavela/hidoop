@@ -40,7 +40,7 @@ import com.papela.hidoop.presentation.chat.common.ReceiveChatBubbleSurface
 import com.papela.hidoop.util.getScreenWidth
 
 @Composable
-fun DateAssigment(content: String, title: String, cardData: List<CardData>) {
+fun DateAssignment(content: String, title: String, cardData: List<CardData>) {
     var isExpanded by remember {
         mutableStateOf(false)
     }
@@ -270,14 +270,14 @@ fun ExpandedCard(
 
 @Preview
 @Composable
-fun DateAssigmentPreview() {
+fun DateAssignmentPreview() {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
 
         ) {
-        DateAssigment(
+        DateAssignment(
             content = "This Is your work today :",
             title = "Testing",
             cardData = listOf(
