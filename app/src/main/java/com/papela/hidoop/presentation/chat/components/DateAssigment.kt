@@ -166,6 +166,7 @@ fun ClickedText(
     }
 }
 
+@Suppress("LongMethod")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ExpandedCard(
@@ -294,7 +295,7 @@ fun DateAssigmentPreview() {
                     day = "Tuesday",
                     year = "2021",
                     title = "Breakfast With Fruit",
-                    time = "8:00 AM"
+                    time = "9:00 AM"
                 ),
                 CardData(
                     date = "14",
@@ -302,7 +303,7 @@ fun DateAssigmentPreview() {
                     day = "Wednesday",
                     year = "2021",
                     title = "Breakfast With Protein",
-                    time = "8:00 AM"
+                    time = "10:00 AM"
                 ),
             )
         )
