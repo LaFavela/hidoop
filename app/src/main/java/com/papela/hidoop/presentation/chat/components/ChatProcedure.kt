@@ -66,7 +66,7 @@ fun ChatProcedure (content:String, title:String, data: List<DataProcedure>){
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ProcedureData(data : DataProcedure) {
+// TODO: Refactor ProcedureData to be within the maximum line length limit (60 lines)
     var isExpanded by remember {
         mutableStateOf(false)
     }
